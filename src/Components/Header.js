@@ -1,11 +1,14 @@
 import React from 'react';
 
-const Header = props => {
-    return (
+class Header extends React.Component {
+  render() {  
+  return (
       <div>
           Header Test
       </div>
     );
   };
+}
+
 
 export default Header;
