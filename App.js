@@ -13,8 +13,10 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <div id='boxContainer'>
         <PanelA />
         <PanelB />
+        </div>
       </div>
     );
   };

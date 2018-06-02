@@ -2,8 +2,8 @@ import React from 'react';
 
 const PanelA = props => {
     return (
-      <div>
-          PanelA Test
+      <div className="aClass">
+          *EEEEEE 
       </div>
     );
   };
