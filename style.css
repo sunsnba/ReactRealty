@@ -1,1 +1,15 @@
-adding css folder
+body { margin: 0; }
+
+.HeadStyle {
+        display: flex;
+        align-items: flex;
+        flex-wrap: nowrap;
+        height: 115px;
+        color: red;
+        border: solid;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .child {
+        width: 40%;
+      }
