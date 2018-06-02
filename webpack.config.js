@@ -8,6 +8,8 @@ const htmlWebpackConfig = new htmlWebpackPlugin({
   inject: 'body'
 });
 
+const inputData = require('./data.json');
+
 module.exports = {
   mode: 'development',
     entry: './index.js',
