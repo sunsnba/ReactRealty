@@ -11,15 +11,22 @@ class App extends Component {
       hData: data.headerData,
       contA: null,
       contB: null,
-      sign: '-'
+      isPositive: false
     };
+    this.handleClick = this.handleClick.bind(this);
   }
+  
+  handleClick () {
+    this.setState(previousState => ({
+        isPositive: !previousState.isPositive
+      }));
+    }
 
   render() {
-    console.log(this.state.hData)
     return (
       <div>
-        <Header hData={this.state.hData} sign={this.state.sign}/>
+        <Header hData={this.state.hData} isPositive={this.state.isPositive} handleClick={this.state.handleClick}
+        />
         <div id='boxContainer'>
         <PanelA />
         <PanelB />
