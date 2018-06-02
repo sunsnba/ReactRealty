@@ -8,7 +8,10 @@ class Header extends React.Component {
   render(props) {  
   return (
       <div className="HeadStyle">
-          Header Test <div> Test 2 </div> <div> tim's mom </div> <div> - </div>
+          {this.props.hData.map(function(el) {
+          return <ul>{el}</ul>
+          })}
+          <button class="minus-button" type="button">{this.props.sign}</button>
       </div>
     );
   };

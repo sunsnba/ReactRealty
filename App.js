@@ -8,21 +8,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hData: null,
+      hData: data.headerData,
       contA: null,
       contB: null,
       sign: '-'
     };
   }
 
-
   render() {
-    console.log('this is data', data)
+    console.log(this.state.hData)
     return (
       <div>
-        <Header />
+        <Header hData={this.state.hData} sign={this.state.sign}/>
         <div id='boxContainer'>
-        {this.state.hData}
         <PanelA />
         <PanelB />
         </div>
