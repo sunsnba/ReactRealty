@@ -12,7 +12,7 @@ class Header extends React.Component {
           {this.props.hData.map((el, index) => {
           return <ul key={index}>{el}</ul>
           }, this)}
-          <button className="minus-button" onClick={this.handleClick}
+          <button className="minus-button" onClick={this.props.handleClick}
           >
            {this.props.isPositive === true ? '+' : '-'}
            </button>
