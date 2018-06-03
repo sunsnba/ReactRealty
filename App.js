@@ -15,18 +15,17 @@ class App extends Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
-
+  
   handleClick () {
     this.setState(prevState => ({
-        isPositive: !prevState.isPositive
+        isPositive: !prevState.isPositive,
       }));
-    }
-
+      }
 
   render() {
     return (
       <div>
-        <Header hData={this.state.hData} isPositive={this.state.isPositive} handleClick={this.handleClick}
+        <Header hData={this.state.hData} isPositive={this.state.isPositive} handleClick={this.handleClick} handleHeader={this.handleHeader} invokeTwo={this.invokeTwo}
         />
         <div id='boxContainer'>
         <PanelA />
