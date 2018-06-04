@@ -6,16 +6,27 @@ class Header extends React.Component {
     super(props)
   }
   render(props) { 
-  return (
+
+    let shouldRenderHeader = this.props.isPositive
+
+    let headerContent = shouldRenderHeader ? (
       <div className="HeadStyle">
+       <ul>  </ul>
+      <button className="plus-button" onClick={this.props.handleClick}
+      >   +</button>
+      </div>
+         ) : (
+          <div className="HeadStyle">
           {this.props.hData.map((el, index) => {
           return <ul key={index}>{el}</ul>
           }, this)}
           <button className="minus-button" onClick={this.props.handleClick}
-          >
-           {this.props.isPositive === true? '+':'-'}
-           </button>
-      </div>
+          > - </button>
+           </div>
+        );
+
+  return (
+          <div> {headerContent} </div>
     );
   };
 }
