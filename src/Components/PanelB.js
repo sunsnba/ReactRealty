@@ -5,7 +5,7 @@ class PanelB extends React.Component {
     super(props)
   }
   render(props) { 
-    let shouldRender = this.props.isPositive || this.props.bClick 
+    let shouldRender = this.props.isPositive || this.props.bShow 
     
     let panel2 = shouldRender ? (
       <div className="bClass" onClick={this.props.handleBClick}>

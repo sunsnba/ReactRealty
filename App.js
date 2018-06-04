@@ -28,7 +28,7 @@ class App extends Component {
 
   handleBClick () {
     this.setState(prevState => ({
-      isPositive: !prevState.isPositive,
+      bShow: !prevState.bShow,
     }));
     }    
 
