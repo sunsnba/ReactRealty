@@ -9,25 +9,27 @@ body { margin: 0; }
         justify-content: space-around;
         align-items: center;
       }
+
+      .aClass {
+        border: solid;
+        width: 500px;
+        height: 500px;
+        margin-top: 2%;
+        background:  #EEEEEE
+      }
+    #boxContainer {
+        display: flex;
+        justify-content: space-around;
+    }
     
-.aClass {
-    color: blue;
-    border: solid;
-    width: 500px;
-    height: 500px;
-    margin-top: 2%;
-  }
-#boxContainer {
-    display: flex;
-    justify-content: space-around;
-}
   .bClass {
-    color: green;
     border: solid;
     width: 500px;
     height: 500px;
     margin-top: 2%;
+    background: #FFFFFF
   }
+
 
 .minus-button {
   padding: 0;
@@ -36,14 +38,6 @@ background: none;
 font-size: 15px;
 }
 
-.plus-button {
-  padding: 0;
-  border: none;
-  background: none;
-  font-size: 15px;
-  float: right;
-  margin-left: 80%
-}
   /* put flex container around a and b
   xontainer will be display flex. 
   flex direction row

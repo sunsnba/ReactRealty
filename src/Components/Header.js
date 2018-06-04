@@ -6,14 +6,6 @@ class Header extends React.Component {
     super(props)
   }
   render(props) { 
-    if(this.props.isPositive === true) {
-      return   <div className="HeadStyle">
-      <button className="plus-button" onClick={this.props.handleClick}
-      >
-       {'+'}
-       </button>
-  </div>
-    } else {
   return (
       <div className="HeadStyle">
           {this.props.hData.map((el, index) => {
@@ -21,11 +13,10 @@ class Header extends React.Component {
           }, this)}
           <button className="minus-button" onClick={this.props.handleClick}
           >
-           {'-'}
+           {this.props.isPositive === true? '+':'-'}
            </button>
       </div>
     );
-  }
   };
 }
 
