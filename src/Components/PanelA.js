@@ -5,7 +5,7 @@ class PanelA extends React.Component {
     super(props)
   }
   render(props) { 
-    let shouldRender = this.props.isPositive || this.props.bShow
+    let shouldRender = this.props.isPositive && this.props.bShow || this.props.bShow 
     
     let panel1 = shouldRender ? (
       <div className="aClass">
