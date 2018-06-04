@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import Header from './src/Components/Header';
 import PanelA from './src/Components/PanelA';
 import PanelB from './src/Components/PanelB';
-import data from './data.json'
+import data from './data.json';
+import style from './style.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       hData: data.headerData,
-      contA: null,
-      contB: null,
+      contA: data.contentA,
+      contB: data.contentB,
       isPositive: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
-  
+
   handleClick () {
     this.setState(prevState => ({
         isPositive: !prevState.isPositive,
@@ -25,11 +26,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header hData={this.state.hData} isPositive={this.state.isPositive} handleClick={this.handleClick} handleHeader={this.handleHeader} invokeTwo={this.invokeTwo}
+        <Header hData={this.state.hData}
+         isPositive={this.state.isPositive} 
+         handleClick={this.handleClick}
         />
         <div id='boxContainer'>
-        <PanelA />
-        <PanelB />
+        <PanelA isPositive={this.state.isPositive} contA={this.state.contA}/>
+        <PanelB isPositive={this.state.isPositive} contB={this.state.contB}/>
         </div>
       </div>
     );
