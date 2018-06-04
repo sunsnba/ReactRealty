@@ -12,9 +12,12 @@ class App extends Component {
       hData: data.headerData,
       contA: data.contentA,
       contB: data.contentB,
-      isPositive: false
+      isPositive: false,
+      bShow: false,
+      
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleBClick = this.handleBClick.bind(this);
   }
 
   handleClick () {
@@ -22,6 +25,12 @@ class App extends Component {
         isPositive: !prevState.isPositive,
       }));
       }
+
+  handleBClick () {
+    this.setState(prevState => ({
+      isPositive: !prevState.isPositive,
+    }));
+    }    
 
   render() {
     return (
@@ -31,8 +40,15 @@ class App extends Component {
          handleClick={this.handleClick}
         />
         <div id='boxContainer'>
-        <PanelA isPositive={this.state.isPositive} contA={this.state.contA}/>
-        <PanelB isPositive={this.state.isPositive} contB={this.state.contB}/>
+        <PanelA isPositive={this.state.isPositive} 
+        contA={this.state.contA}
+        bShow={this.state.bShow}
+        />
+        <PanelB isPositive={this.state.isPositive}
+         contB={this.state.contB}
+         handleBClick={this.handleBClick}
+         bShow={this.state.bShow}
+         />
         </div>
       </div>
     );

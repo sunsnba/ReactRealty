@@ -5,14 +5,14 @@ class PanelB extends React.Component {
     super(props)
   }
   render(props) { 
-    let shouldRender = this.props.isPositive
+    let shouldRender = this.props.isPositive || this.props.bClick 
     
     let panel2 = shouldRender ? (
-      <div className="bClass">
+      <div className="bClass" onClick={this.props.handleBClick}>
        <h3> {this.props.contB} </h3>
         </div>
     ) : (
-      <div className="aClass">  </div>
+      <div className="aClass" onClick={this.props.handleBClick}>  </div>
     );
    
     return (
