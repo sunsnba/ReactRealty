@@ -1,1 +1,1 @@
-# ReactRealty
+This project was implemented using the react library with the webpack-dev-server. Using webpack-dev-server was ideal since I could see the impact my code was having in real time without any additional steps. I considered also using the redux library but since the state was so small working with react seemed like the best choice. As a big fan of material-UI my first thought was to create the header + panels with its assistance, but the simple UI made css seem like the best option.
