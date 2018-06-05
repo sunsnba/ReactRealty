@@ -8,14 +8,10 @@ class PanelA extends React.Component {
     let shouldRender = this.props.isPositive && this.props.bShow || this.props.bShow 
     
     let panel1 = shouldRender ? (
-      <div className="aClass">
-        </div>
-    ) : (
-      <div className="bClass">
-      <h3> {this.props.contA} </h3>
-        </div>
+      <div className="aClass"> </div>
+        ) : (
+      <div className="bClass"> <h3> {this.props.contA} </h3> </div>
     );
-   
     return (
       <div> {panel1} </div>
     );

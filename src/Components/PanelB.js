@@ -14,7 +14,6 @@ class PanelB extends React.Component {
     ) : (
       <div className="aClass" onClick={this.props.handleBClick}>  </div>
     );
-   
     return (
       <div> {panel2} </div>
     );

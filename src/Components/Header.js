@@ -6,7 +6,6 @@ class Header extends React.Component {
     super(props)
   }
   render(props) { 
-
     let shouldRenderHeader = this.props.isPositive
 
     let headerContent = shouldRenderHeader ? (
@@ -30,6 +29,5 @@ class Header extends React.Component {
     );
   };
 }
-
 
 export default Header;
