@@ -3,7 +3,7 @@ import Header from './src/Components/Header';
 import PanelA from './src/Components/PanelA';
 import PanelB from './src/Components/PanelB';
 import data from './data.json';
-import style from './style.css';
+
 
 class App extends Component {
   constructor(props) {
