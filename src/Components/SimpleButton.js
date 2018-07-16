@@ -3,10 +3,8 @@ import React from 'react';
 
 export const SimpleButton = (props) => {
    return(
-    <div>
-      <button>
+    <div className="buttonStyle">
         <a href={props.link} > RealtyMogul </a>
-      </button>
      </div>   
    )  
   }
