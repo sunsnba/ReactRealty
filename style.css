@@ -46,3 +46,22 @@ font-size: 15px;
 margin-left: 39.5%;
 position: absolute;
 }
+
+.buttonStyle {
+  display: inline;
+  justify-content: center;
+  position: absolute;
+  right: 750px;
+  top: 350px;
+  align-items: center;
+  width: 7%;
+  border-radius: 10px;
+  background: linear-gradient(to top, #ccc, #ddd);
+  color: orange;
+  padding: 10px 20px;
+  height: 3vh;
+  text-decoration: none;
+  font-family: sans-serif;
+  border: 1px solid gray;
+  box-shadow: 0 0 0px 6px #ddd, 0 0 0 7px white, 0 0 0 8px gray;
+}
