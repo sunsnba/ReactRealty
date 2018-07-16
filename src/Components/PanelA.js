@@ -1,4 +1,5 @@
 import React from 'react';
+import {SimpleButton} from './SimpleButton' 
 
 class PanelA extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class PanelA extends React.Component {
     let shouldRender = this.props.isPositive && this.props.bShow || this.props.bShow 
     
     let panel1 = shouldRender ? (
-      <div className="aClass"> </div>
+      <div className="aClass"> {SimpleButton} </div>
         ) : (
       <div className="bClass"> <h3> {this.props.contA} </h3> </div>
     );
